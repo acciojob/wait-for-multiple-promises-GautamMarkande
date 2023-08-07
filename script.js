@@ -1,6 +1,6 @@
 let a = new Promise((resolve)=>{
 	setTimeout(()=>{
-		resolve(1);
+		resolve(2);
 	},2000);
 })
 let b = new Promise((resolve)=>{
