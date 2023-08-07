@@ -15,7 +15,11 @@ let c = new Promise((resolve)=>{
 })
 let x = Promise.all([a,b,c]);
 const tbody = document.querySelector("tbody");
-tbody.innerHTML = `Loading...`
+
+
+tbody.innerHTML = `<tr>
+			   Loading...
+		  </tr>`
 x.then((arr)=>{
 	tbody.innerHTML = ""
    let totaltime = 0;
