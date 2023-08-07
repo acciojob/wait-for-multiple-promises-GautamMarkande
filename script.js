@@ -18,7 +18,7 @@ const tbody = document.querySelector("tbody");
 // AssertionError: Timed out retrying after 4000ms: Expected to find element: `tr#loading`, but never found it.
 
 tbody.innerHTML = `<tr id=loading>
-			   Loading...
+	     <td>Loading...</td>
 		  </tr>`
 x.then((arr)=>{
 	tbody.innerHTML = ""
