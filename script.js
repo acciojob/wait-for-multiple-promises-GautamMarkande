@@ -15,7 +15,9 @@ let c = new Promise((resolve)=>{
 })
 let x = Promise.all([a,b,c]);
 const tbody = document.querySelector("tbody");
+tbody.innerHTML = `Loading...`
 x.then((arr)=>{
+	tbody.innerHTML = ""
    let totaltime = 0;
    for(let i = 0; i<arr.length; i++){
     totaltime=Math.max(arr[i],totaltime);
@@ -30,5 +32,5 @@ x.then((arr)=>{
            <td>${totaltime}</td>
  		`
  	tbody.appendChild(tr);
-   tbody.firstElementChild.remove();
+   //tbody.firstElementChild.remove();
 })
